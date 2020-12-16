@@ -1,0 +1,15 @@
+CREATE USER anatoliy_admin IDENTIFIED BY oracle;
+GRANT CONNECT TO anatoliy_admin;
+GRANT CONNECT, RESOURCE, DBA TO anatoliy_admin;
+
+GRANT UNLIMITED TABLESPACE TO anatoliy_admin;
+
+GRANT
+  SELECT,
+  INSERT,
+  UPDATE,
+  DELETE
+ON
+  schema.books
+TO
+  books_admin;
